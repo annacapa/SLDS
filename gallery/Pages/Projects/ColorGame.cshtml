@@ -1,0 +1,46 @@
+﻿@page
+@model ColorGameModel
+@{
+    ViewData["Title"] = "Color Game";
+}
+
+    
+
+    <section class="colorGame">
+
+
+    <h1>
+        The Great 
+        <br>
+        <span id="colorDisplay">RGB</span> 
+        <br>
+        Color Game
+    </h1>
+    
+    <div id="msg">
+        <span id="message"></span>
+    </div>
+    
+    <div id="stripe">
+        <button id="reset">New Colors</button>
+        <!-- <span id="message"></span> -->
+        <button class="mode">Easy</button>
+        <button class="mode selected">Hard</button>
+    </div>
+
+    <div id="colors">
+        <ul class="grid">
+            <li class="square"></li>
+            <li class="square"></li>
+            <li class="square"></li>
+            <li class="square"></li>
+            <li class="square"></li>
+            <li class="square"></li>
+        </ul>
+
+    </div>
+
+    </section>
+
+
+
