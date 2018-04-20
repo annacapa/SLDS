@@ -11,10 +11,22 @@ canvas {
     transform: translate(-50%, -50%);
     padding: 10px;
     background: rgb(230, 230, 230); /* IE */
-    background: rgba(255, 255, 255, 0.30); /* NON-IE */
+    background: rgba(255, 255, 255, 0.60); /* NON-IE */
     border-radius: 10px;
-    color: #222
+    color: #222;
+    animation: pulse 15s
 }
+
+@keyframes pulse {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
 
 .fadeIn {
     opacity: 0;

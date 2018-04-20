@@ -56,9 +56,14 @@
     <link rel="stylesheet" href="~/css/reset.css">
     <link rel="stylesheet" href="~/css/stylesheet.css">
     <!-- COLOR GAME -->
-    <link rel="stylesheet" href="~/css/colorGame.css">
+    @RenderSection("colorGameCSS", required: false)
+
     <!-- PATATAP CLONE -->
-    <link rel="stylesheet" href="~/css/patatap.css">
+    @RenderSection("patatapCSS", required: false)
+
+    <!-- TO DO LIST -->
+    @RenderSection("todoCSS", required: false)
+
         
 </head>
 
@@ -111,10 +116,16 @@
     <!-- CUSTOM JAVASCRIPT -->
     <script src="~/js/site.js"></script>
     <!-- COLOR GAME -->
-    <script src="~/js/colorGame.js"></script>
+    @RenderSection("colorGameJS", required: false)
+
     <!-- PATATAP CLONE -->
+    @RenderSection("patatapJS", required: false)
     <script src="~/js/paper-full.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.29/howler.js"></script>
-    <script src="~/js/paperscript.js"></script>    
+    <script src="~/js/paperscript.js"></script> 
+
+    <!-- TO DO LIST -->
+    @RenderSection("todoJS", required: false)
+        
 </body>
 </html>

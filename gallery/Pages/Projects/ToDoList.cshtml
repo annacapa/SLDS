@@ -1,0 +1,41 @@
+﻿@page
+@model ToDoListModel
+@{
+    ViewData["Title"] = "To Do List";
+}
+
+    
+
+    <section class="fadeIn">
+
+
+    <div id="container">
+        <h1>To-do List<i class="fa fa-plus" aria-hidden="true"></i></h1>
+        <input type="text" placeholder="Add New To-Do">
+        <ul>
+            <li><span><i class="fa fa-trash" aria-hidden="true"></i></span> Write thank you card</li>
+            <li><span><i class="fa fa-trash" aria-hidden="true"></i></span> Make weekend plans</li>
+            <li><span><i class="fa fa-trash" aria-hidden="true"></i></span> Go swimming</li>
+        </ul>
+
+    </div>
+
+    </section>
+
+
+
+@section todoCSS {
+
+    <link rel="stylesheet" href="~/css/todos.css">
+    <link rel="stylesheet" media="only screen and (min-width:50px) and (max-width:560px)" href="~/css/todos-small.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+
+}
+
+@section todoJS {
+
+    <script src="~/js/jquery-2.1.4.min.js"></script>
+    <script src="~/js/todos.js"></script>
+
+}
+
