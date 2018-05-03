@@ -285,11 +285,13 @@ header nav {
 }
 
     .hero .grid li {
-        height: 300px;
+        height: 250px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center
+        justify-content: center;
+        border-radius: 3px;
+        margin: 1px
         /* animation-name: item1;
         animation-duration: 5s;
         animation-delay: 1s;
@@ -298,7 +300,7 @@ header nav {
     }
 
         .hero .grid li.item {
-            flex-basis: 33%
+            flex-basis: 30%
         }
 
 /*   Color Animation 1   */
