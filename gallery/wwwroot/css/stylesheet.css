@@ -43,6 +43,32 @@ a {
             color: pink
         }
 
+
+/*  Page Styles  */
+
+
+
+body.homepage {
+    background: linear-gradient(270deg, #a5d88c, #ed996e, #77a2c2, #e38ea9, #94eddc, #efde8c, #c4a9f4, #92c7de, #ed91c2);
+    background-size: 1800% 1800%;
+    -webkit-animation: gradientAnimation 55s ease infinite;
+    -moz-animation: gradientAnimation 55s ease infinite;
+    animation: gradientAnimation 55s ease infinite;
+    background-size: auto 100%
+}
+
+@media and screen (min-width: 768px) {
+    body.homepage {
+        background: linear-gradient(270deg, #a5d88c, #ed996e, #77a2c2, #e38ea9, #94eddc, #efde8c, #c4a9f4, #92c7de, #ed91c2);
+        background-size: 1800% 1800%;
+        -webkit-animation: gradientAnimation 55s ease infinite;
+        -moz-animation: gradientAnimation 55s ease infinite;
+        animation: gradientAnimation 55s ease infinite;
+        background-size: cover
+    }
+}
+
+
 /*   Background Color Gradient Animation  */
 
 
@@ -199,8 +225,16 @@ header nav {
 
 @media (max-width: 800px) {
     header {
+        padding: 20px 50px
+    }
+}
+
+@media (max-width: 540px) {
+    header {
         padding: 20px 50px;
-        flex-direction: column
+        flex-direction: column;
+        background: rgb(230, 230, 230); /* IE */
+        background: rgba(255, 255, 255, 0.50) /* NON-IE */
     }
 
         header h2 {
@@ -208,17 +242,23 @@ header nav {
         }
 }
 
-/*   Hero Styles   */
 
-.hero {
+.background-image {
+    background-size: 1800% 1800%;
+    z-index: -1;
+    background-color: #7feaeb
+}
+
+
+/*   Index Page Styles   */
+
+.index-page {
     position: relative;
-    /* justify-content: center; */
     text-align: center;
-    height: 100vh;
     color: #fff
 }
 
-    .hero .background-image {
+    .index-page .background-image {
         position: absolute;
         top: 0;
         left: 0;
@@ -228,7 +268,7 @@ header nav {
         background-color: #7feaeb
     }
 
-    .hero h1 {
+    .index-page h1 {
         font: 100 70px 'Lato', sans-serif;
         text-transform: uppercase;
         margin-top: 20px;
@@ -236,16 +276,16 @@ header nav {
         font-weight: 100
     }
 
-    .hero h3 {
+    .index-page h3 {
         font: 300 21px 'Lato', sans-serif;
         margin-bottom: 40px
     }
 
-    .hero a.btn {
+    .index-page a.btn {
         padding: 20px 46px
     }
 
-.hero-content-area {
+.index-page-content-area {
     opacity: 0;
     margin-top: 40px;
     animation: 1s slidefade 1s forwards
@@ -259,32 +299,32 @@ header nav {
 }
 
 @media (max-width: 800px) {
-    .hero {
-        min-height: 600px
+    .index-page {
     }
 
-        .hero h1 {
-            font-size: 48px
+        .index-page h1 {
+            font-size: 36px;
+            margin-top: 50px
         }
 
-        .hero h3 {
+        .index-page h3 {
             font-size: 24px
         }
 
-        .hero a.btn {
+        .index-page a.btn {
             padding: 15px 40px
         }
 }
 
-/*   Hero Grid Styles */
+/*   Index Page Grid Styles */
 
-.hero .grid {
+.index-page .grid {
     opacity: 0;
     margin-top: 40px;
     animation: 1s slidefade 1s forwards
 }
 
-    .hero .grid li {
+    .index-page .grid li {
         height: 250px;
         display: flex;
         flex-wrap: wrap;
@@ -292,16 +332,19 @@ header nav {
         justify-content: center;
         border-radius: 3px;
         margin: 1px
-        /* animation-name: item1;
-        animation-duration: 5s;
-        animation-delay: 1s;
-        animation-iteration-count: infinite
-        */
     }
 
-        .hero .grid li.item {
+        .index-page .grid li.item {
             flex-basis: 30%
         }
+
+@media (max-width: 800px) {
+    .index-page .grid li.item {
+        flex-basis: 100%;
+        padding: 20px
+    }
+}
+
 
 /*   Color Animation 1   */
 
@@ -370,6 +413,130 @@ header nav {
         background-color: #a5d88c
     }
 }
+
+
+/*  About Page Styles */
+
+.about-page {
+    position: relative;
+    text-align: center;
+    color: #fff
+}
+
+
+    .about-page h1 {
+        font: 100 70px 'Lato', sans-serif;
+        text-transform: uppercase;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-weight: 100
+    }
+
+    .about-page h3 {
+        font: 300 21px 'Lato', sans-serif;
+        margin-bottom: 40px
+    }
+
+    .about-page p {
+        font: 300 16px 'Lato', sans-serif;
+        margin: 0px 60px 40px 60px;
+        text-align: left;
+    }
+
+        .about-page a.btn {
+            padding: 20px 46px
+        }
+
+.about-page-content-area {
+    opacity: 0;
+    margin-top: 40px;
+    animation: 1s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin-top: 0
+    }
+}
+
+@media (max-width: 800px) {
+    .about-page {
+    }
+
+        .about-page h1 {
+            font-size: 36px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .about-page h3 {
+            font-size: 24px
+        }
+
+        .about-page a.btn {
+            padding: 15px 40px
+        }
+}
+
+/*   About Grid Styles */
+
+.about-page .grid {
+    opacity: 0;
+    margin-top: 40px;
+    animation: 1s slidefade 1s forwards;
+}
+
+
+    .about-page .grid li {
+        margin-top: 40px;
+        height: 540px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        font: 300 1.1em 'Lato', sans-serif;
+    }
+
+        .about-page .grid li.small {
+            flex-basis: 30%;
+            align-items: center;
+        }
+
+        .about-page .grid li.large {
+            flex-basis: 70%;
+            text-align: left;
+            padding: 0 15px 15px 25px;
+            line-height: 1.4em;
+        }
+
+@media (max-width: 800px) {
+
+
+    .about-page .grid li {
+        margin-top: 10px;
+        align-items: center;
+        height: 580px;
+    }
+
+        .about-page .grid li.small {
+            order: 2;
+            flex-basis: 100%;
+        }
+
+        .about-page .grid li.large {
+            flex-basis: 100%;
+            line-height: 1.3em;
+            font: 300 1.05em 'Lato', sans-serif;
+        }
+
+
+
+
+
+}
+
+
 
 /*   Destinations Styles   */
 
